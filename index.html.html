@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aarna Gupta – Business Economics Student & Bharatanatyam Dancer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F3F6F1; --surface:#FFFFFF; --ink:#24202B; --muted:#5E5A68;
+  --peacock:#5B3FD1; --gold:#F28CA7; --silk:#0E8A7D; --line:#D5DDD2;
+  --hero-bg:#2B1038; --hero-ink:#F8F3FA;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#17141D; --surface:#211C2A; --ink:#EFEAF3; --muted:#B0A9BC; --peacock:#A995FF;
+    --silk:#4FD1BF; --line:#352E40; --hero-bg:#120818; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17141D; --surface:#211C2A; --ink:#EFEAF3; --muted:#B0A9BC; --peacock:#A995FF;
+  --silk:#4FD1BF; --line:#352E40; --hero-bg:#120818; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+
+/* Hero */
+.hero{background:var(--hero-bg);color:var(--hero-ink)}
+.nav{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:flex-end;padding:1.25rem 0 0;font-size:.95rem}
+.nav a{text-decoration:none;opacity:.8;padding:.25rem 0;border-bottom:2px solid transparent}
+.nav a:hover{opacity:1;border-color:var(--gold)}
+.hero-main{padding:clamp(3rem,10vw,7rem) 0 clamp(3rem,8vw,5.5rem)}
+.hero h1{font:800 clamp(3.4rem,14vw,9.5rem)/.9 var(--serif);letter-spacing:-.03em;margin:0 0 1.75rem;font-variation-settings:"opsz" 144}
+.hero h1 span{display:block}
+.hero h1 span+span{color:var(--gold);margin-left:clamp(1rem,8vw,6rem)}
+.hero p{max-width:34rem;font-size:1.2rem;margin:0 0 2rem;opacity:.92}
+.cta{display:inline-block;background:var(--gold);color:#1B1305;font-weight:600;padding:.8rem 1.4rem;border-radius:2px;text-decoration:none}
+.cta:hover{background:#F8A9BE}
+.border{height:14px;background:conic-gradient(from -45deg at bottom,var(--gold) 90deg,transparent 0) 0 0/28px 14px repeat-x}
+.border.flip{background:conic-gradient(from 135deg at top,var(--silk) 90deg,transparent 0) 0 0/28px 14px repeat-x}
+
+/* Sections */
+section{padding:clamp(2.75rem,7vw,4.5rem) 0;border-bottom:1px solid var(--line)}
+.row{display:grid;gap:1.25rem 3rem;grid-template-columns:1fr}
+@media(min-width:760px){.row{grid-template-columns:13rem 1fr}}
+h2{font:600 1.9rem/1.1 var(--serif);margin:0;color:var(--peacock)}
+h3{font:600 1.25rem/1.25 var(--serif);margin:0 0 .15rem}
+.meta{color:var(--muted);font-size:.95rem;margin:0}
+.item{padding:0 0 1.5rem 1.25rem;border-left:3px solid var(--gold);margin-bottom:1.5rem;position:relative}
+.item:last-child{margin-bottom:0;padding-bottom:0}
+.item.silk{border-color:var(--silk)}
+.item p{margin:.4rem 0 0}
+.score{display:inline-block;font-weight:600;color:var(--silk);margin-left:.5rem}
+.lede{font:400 1.45rem/1.45 var(--serif);margin:0;max-width:40rem}
+.cols{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);padding:1.25rem 1.4rem;border-radius:4px}
+.card h3{font-size:1.1rem}
+.card p{margin:.4rem 0 0;color:var(--muted);font-size:1rem}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:.55rem 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:0;list-style:none}
+.tags li{border:1.5px solid var(--peacock);color:var(--peacock);padding:.35rem .9rem;border-radius:999px;font-weight:500}
+.note{color:var(--muted);font-size:.95rem;margin-top:1rem}
+footer{padding:3rem 0 4rem}
+footer .big{font:600 clamp(1.4rem,4.5vw,2.4rem)/1.2 var(--serif);word-break:break-word}
+footer .big a{color:var(--silk);text-decoration-thickness:2px;text-underline-offset:.2em}
+footer small{display:block;margin-top:1.5rem;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.nav,.cta{display:none}.hero{background:none;color:#000}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#leadership">Leadership</a>
+      <a href="#work">Work &amp; projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hero-main">
+      <h1><span>Aarna</span><span>Gupta</span></h1>
+      <p>Business Economics student at Delhi University and IIM Bangalore BBA-DBE student, with a keen interest in marketing, strategy, finance and consulting.</p>
+      <a class="cta" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="border" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="about"><div class="wrap row">
+  <h2>About</h2>
+  <p class="lede">A Business Economics student with a keen interest in marketing, strategy, finance, and consulting, with a passion for developing creative, research-driven solutions to real-world business challenges. Ten years of Bharatanatyam training have fostered discipline, creativity, and dedication, complemented by an interest in public speaking, reading, and painting.</p>
+</div></section>
+
+<section id="education"><div class="wrap row">
+  <h2>Education</h2>
+  <div>
+    <div class="item"><h3>BBA DBE Program</h3><p class="meta">IIM Bangalore · 2026 – present</p></div>
+    <div class="item"><h3>Bachelors in Business Economics</h3><p class="meta">College of Vocational Studies, Delhi University · 2026 – present</p></div>
+    <div class="item silk"><h3>CBSE Class XII <span class="score">90.0%</span></h3><p class="meta">Bharatiya Vidya Bhavan, New Delhi · 2025 – 2026</p></div>
+    <div class="item silk"><h3>CBSE Class X <span class="score">92.5%</span></h3><p class="meta">Bharatiya Vidya Bhavan, New Delhi · 2023 – 2024</p></div>
+  </div>
+</div></section>
+
+<section id="leadership"><div class="wrap row">
+  <h2>Leadership</h2>
+  <div class="cols">
+    <div class="card"><h3>CEO, Kala Nipuniya</h3><p>Led the school’s commerce club and managed its finances, stock handling and marketing.</p></div>
+    <div class="card"><h3>Cultural Head Girl</h3><p>Appointed to the Student Council in 11th and 12th grade.</p></div>
+    <div class="card"><h3>ERIC Society</h3><p>Selected for the society at my college.</p></div>
+    <div class="card"><h3>Enactus CVS</h3><p>Part of the Enactus society at the College of Vocational Studies.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap row">
+  <h2>Work &amp; projects</h2>
+  <div>
+    <div class="item"><h3>Impact Fellowship Intern</h3><p class="meta">Hindu College · June – July 2026</p><p>Interned with the Impact Fellowship programme.</p></div>
+    <div class="item"><h3>Find Mind</h3><p class="meta">School project · unpublished</p><p>Co-created a mental-health awareness app for my school with peers and teachers, built around the UN Sustainable Development Goals.</p></div>
+    <div class="item"><h3>Prodigy</h3><p class="meta">Inter-school event · Shaheed Sukhdev College of Business Studies · 2025</p><p>Participated in the college’s business event.</p></div>
+    <div class="item silk"><h3>Academic standing</h3><p>Placed 2nd overall in 11th grade and 3rd overall in 12th grade.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap row">
+  <h2>Skills &amp; training</h2>
+  <div>
+    <ul class="tags"><li>Canva (comfortable)</li><li>Excel (beginner)</li><li>Finance &amp; stock handling</li><li>Marketing</li><li>Team leadership</li></ul>
+    <ul class="plain" style="margin-top:1.5rem">
+      <li><strong>Bharatanatyam</strong> · 5-year diploma course</li>
+      <li><strong>National School of Drama, Delhi</strong> · certificate courses</li>
+    </ul>
+    <p class="note">Outside work: painting, reading novels, travelling and watching thrillers.</p>
+  </div>
+</div></section>
+</main>
+
+<div class="border flip" aria-hidden="true"></div>
+<footer id="contact"><div class="wrap">
+  <p class="meta">Based in New Delhi</p>
+  <div class="big"><a href="mailto:aarna.gupta005@gmail.com">aarna.gupta005@gmail.com</a></div>
+  <small>© 2026 Aarna Gupta</small>
+</div></footer>
+
+</body>
+</html>
